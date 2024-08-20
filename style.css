@@ -23,6 +23,10 @@
 .drive {
   width: 40px;
 }
+
+a {
+  text-decoration: none;
+}
 img {
   width: 100%;
   pointer-events: none;
@@ -165,12 +169,30 @@ body.prevent-background-scroll {
 
 .popup {
   display: none;
-  position: fixed;
+  position: static;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
   z-index: 20;
-  animation: openPopup 0.6s ease-in-out 1 normal;
+  animation: openPopup 0.15s ease-in-out 1 normal;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
 }
+
+.popup.closing {
+  opacity: 0;
+  animation: closePopup 0.15s ease-in-out 1 normal forwards;
+}
+
+@keyframes closePopup {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
 
 @keyframes openPopup {
   from {
@@ -196,9 +218,9 @@ body.prevent-background-scroll {
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 12px;
   color: #fff;
-  z-index: 30;
   transition: all 0.5s ease-in-out;
 }
+
 
 .popup-header {
   position: relative;
@@ -597,7 +619,7 @@ body.prevent-background-scroll {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(237, 223, 36, 0.8);
+  background: rgba(226, 22, 22, 0.8);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4),
     inset 0px 4px 4px rgba(255, 255, 255, 0.2);
   padding: 10px;
@@ -609,13 +631,13 @@ body.prevent-background-scroll {
 }
 
 .control li:hover {
-  background: rgba(224, 198, 26, 0.8);
+  background: rgba(224, 29, 26, 0.8);
   transform: scale(0.98);
 }
 
 .arrow {
   font-size: 1.8rem;
-  color: #fff;
+  color: #e8c3c3;
 }
 
 /* -------- */
@@ -742,4 +764,45 @@ input:-webkit-autofill:active {
 .contato {
   color: #fff;
   text-decoration: none;
+}
+
+.contato:hover {
+  color: #000000;
+}
+
+.icon-box {
+  position: relative;
+}
+
+.icon-box:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  z-index: 1;
+}
+
+css
+Edit
+Copy code
+.icon-box {
+  /* ... */
+  cursor: pointer;
+}
+
+.popup {
+  /* ... */
+  transition: opacity 0.5s ease-in-out;
+}
+
+.popup.closing {
+  opacity: 0;
 }
