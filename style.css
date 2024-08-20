@@ -806,3 +806,7 @@ Copy code
 .popup.closing {
   opacity: 0;
 }
+
+.project-box img {
+  width: 100%;
+}
