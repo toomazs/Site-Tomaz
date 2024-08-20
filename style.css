@@ -67,7 +67,7 @@ body {
   position: relative;
   height: 100vh;
   width: 100%;
-  background-image: url(https://static.vecteezy.com/system/resources/previews/025/414/742/original/blood-red-gradient-color-backdrop-smooth-elegant-bloody-red-background-template-dark-red-flowing-colored-gradient-mesh-perfect-for-app-web-design-webpages-banners-cards-backgrounds-templates-free-vector.jpg);
+  background-image: url(img/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
