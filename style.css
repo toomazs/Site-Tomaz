@@ -740,6 +740,8 @@ input:-webkit-autofill:active {
   gap: 10px;
 }
 
+
+
 @media (max-width: 900px) {
   .popup-body {
     padding: 30px;
@@ -758,7 +760,7 @@ input:-webkit-autofill:active {
 
   .about-container .img-frame {
     grid-area: img-frame;
-    width: 230px;
+    margin-top: 90px;
     aspect-ratio: 1/1;
   }
 
@@ -771,7 +773,16 @@ input:-webkit-autofill:active {
   .about-container h1 {
     margin-bottom: 16px;
   }
+
+  .all-projects {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
 }
+
+
 
 
 @media (max-width: 600px) {
@@ -783,6 +794,8 @@ input:-webkit-autofill:active {
     font-size: 0.9rem;
   }
 }
+
+
 
 @media (max-width: 480px) {
   .about-container .img-frame {
