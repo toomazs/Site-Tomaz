@@ -780,6 +780,9 @@ input:-webkit-autofill:active {
     align-items: center;
   }
 
+  .icon-container {
+    margin-bottom: 20px;
+  }
 }
 
 
