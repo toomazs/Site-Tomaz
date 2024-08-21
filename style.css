@@ -774,6 +774,14 @@ input:-webkit-autofill:active {
     margin-bottom: 16px;
   }
 
+ .popup-container {
+  position: fixed;
+   width: 85%;
+   height: auto;
+   padding: auto;
+   margin: auto;
+ }
+
   .all-projects {
     width: 100%;
     justify-content: center;
@@ -783,15 +791,8 @@ input:-webkit-autofill:active {
 
   .icon-container {
     margin: auto;
-    width: auto;
-    height: auto;
     max-width: auto;
     max-height: auto;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 0;
-    margin-bottom: 15px;
   }
   
   
