@@ -193,8 +193,8 @@ body.prevent-background-scroll {
   top: 0;
   left: 0;
   /*
-  max-width: 60vw;
-  max-height: 80vh;*/
+  width: auto;
+  height: auto;
   overflow-y: auto;
   padding: 15px;
   margin: 0 auto;
@@ -774,6 +774,7 @@ input:-webkit-autofill:active {
   }
 }
 
+
 @media (max-width: 600px) {
   .card {
     height: 280px;
@@ -790,6 +791,7 @@ input:-webkit-autofill:active {
     width: 180px;
     aspect-ratio: 1/1;
   }
+
 
   .all-projects img {
     height: 180px;
@@ -855,5 +857,7 @@ Copy code
 
 @media only screen and (max-width: 600px) {
   body {
+    position: relative;
+    
     flex-direction: column;
   }
