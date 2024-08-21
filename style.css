@@ -780,18 +780,21 @@ input:-webkit-autofill:active {
     align-items: center;
   }
 
+
   .icon-container {
     margin: auto;
+    width: auto;
+    height: auto;
     max-width: auto;
     max-height: auto;
     justify-content: center;
     align-items: center;
-    gap: 20px;
     flex-wrap: wrap;
     margin-top: 0;
-    margin-bottom: 2vh;
-    
+    margin-bottom: 15px;
   }
+  
+  
 }
 
 
