@@ -1,7 +1,11 @@
 ### Meu Site. 💫
 
-👨🏽‍💻 • Bem-vindo ao meu próprio site. Fiz para deixar mais claro as minhas informações. Foi inspirado na interface MacOS e usado alguns templates de botões pelo codepen.io <br>
+👨🏽‍💻 • Bem-vindos ao meu site-portfólio. Passei alguns dias pegando exemplos, estudando & programando para deixar esse projeto mais estético e moderno possível, mas sem também esquecer da praticidade e da responsividade. <br>
 
-📃 • Foi usado External CSS, JavaScript Swiper, IonIcons.
+📱 • A ideia do site é inspirada em simular um sistema operacional do macOS, com a área de trabalho e a barra de tarefas, aonde em cada seção é possível fechar, minimizar ou até maximizar as abas. <br>
 
-Acesse: <a href="https://site-tomaz.vercel.app/"><em><b>SITE</b></em></a>
+☄️ • Espero que gostem e, ao navegarem pelo meu site-portfólio, vocês possam entender mais sobre o meu trabalho e o meu potencial como um Front-end Developer. <br>
+
+📃 • Foi usado jQuery, Tilt.js, Swiper <br>
+
+Acesse o site on-line: <a href="https://site-tomaz.vercel.app/"><em><b>EDUARDO TOMAZ</b></em></a>
