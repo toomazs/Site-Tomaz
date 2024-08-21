@@ -80,7 +80,7 @@ maximizeBtns.forEach((btn) => {
 
   $(".popup").tilt({
     maxTilt: 15,
-    perspective: 2100,
+    perspective: 2500,
     easing: "cubic-bezier(.03,.98,.52,.99)",
     speed: 500,
     glare: false,

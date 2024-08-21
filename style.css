@@ -826,9 +826,6 @@ input:-webkit-autofill:active {
   z-index: 1;
 }
 
-css
-Edit
-Copy code
 .icon-box {
   /* ... */
   cursor: pointer;
@@ -856,7 +853,5 @@ Copy code
 
 @media only screen and (max-width: 600px) {
   body {
-    position: relative;
-    
     flex-direction: column;
   }
