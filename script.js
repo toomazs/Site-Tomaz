@@ -66,13 +66,28 @@ maximizeBtns.forEach((btn) => {
     } else {
       container.style.width = "100%";
       container.style.top = "50%";
-      body.style.height = "90vh";
+      body.style.height = "80vh";
     }
 
     modal.classList.toggle("maximized");
     body.classList.toggle("prevent-scroll");
   });
 });
+
+( function( $ ) {
+
+	"use strict";
+
+  $(".popup").tilt({
+    maxTilt: 15,
+    perspective: 1800,
+    easing: "cubic-bezier(.03,.98,.52,.99)",
+    speed: 500,
+    glare: false,
+    maxGlare: 0.2,
+    scale: 1.01
+  });
+  
 
 // Swiper
 var swiper = new Swiper(".swiper", {
@@ -103,4 +118,9 @@ var swiper = new Swiper(".swiper", {
       slidesPerView: 4,
     },
   },
-});
+} )
+}( jQuery ) );
+
+
+
+

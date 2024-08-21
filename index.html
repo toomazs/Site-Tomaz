@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Eduardo Tomaz</title>
   <link rel="shortcut icon" type="image/jpg" href="img/logoaba.png"/>
+  
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css'>
 <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css'><link rel="stylesheet" href="./style.css">
 
@@ -11,6 +12,10 @@
 <body>
 <!-- partial:index.partial.html -->
 <body>
+  <video autoplay loop muted>
+    <source src="img/background.mp4" type="video/mp4">
+  </video>
+
     <section>
       <div class="icon-container">
         <div class="icon-box about" data-modal="about" title="Sobre">
@@ -81,6 +86,8 @@
         </div>
       </div>
     </div>
+</div>
+
 
     <div class="popup" id="projects">
       <div class="popup-container">
@@ -100,21 +107,94 @@
 
         <div class="popup-body">
           <div class="skill-list">
-            <h1>Competências</h1>
+            <h1>TECH STACK 
+            </h1>
             <ul>
-              <li>HTML5</li>
-              <li>CSS3</li>
-              <li>TailwindCSS</li>
-              <li>JavaScript</li>
-              <li>PHP</li>
-              <li>Python</li>
-              <li>MySQL</li>
+
+              <li>
+                <img src="img/html5.png">
+                 HTML5/HAML/Pug
+                </li>
+
+              <li>
+                <img src="img/css3.png">
+                TailwindCSS/CSS3
+              </li>
+
+              <li>
+                <img src="img/csharp.png">
+                C#/C++
+              </li>
+
+              <li>
+                <img src="img/sass.png">
+                SCSS/SASS
+              </li>
+
+              <li>
+                <img src="img/bootstrap.png">
+                Bootstrap
+              </li>
+
+              <li>
+                <img src="img/js.png">
+                JavaScript/Babel
+              </li>
+
+              <li>
+                <img src="img/jquery.png">
+                jQuery
+              </li>
+
+              <li>
+                <img src="img/react.png">
+                React Native
+              </li>
+
+              <li>
+                <img src="img/vue.png">
+                Vue.js/Vite/Node.js
+              </li>
+
+              <li>
+                <img src="img/angular.png">
+                AngularJS
+              </li>
+
+              <li>
+                <img src="img/next.png">
+                Next.js/Nest.js
+              </li>
+
+              <li>
+                <img src="img/ionic.png">
+                IONIC
+              </li>
+
+              <li>
+                <img src="img/laravel.png">
+                PHP/Laravel
+              </li>
+
+              <li>
+                <img src="img/git.png">
+                Git/Github
+              </li>
+
+              <li>
+                <img src="img/python.png">
+                Python 3/Django/Selenium
+              </li>
+
             </ul>
           </div>
 
           <div class="project-container">
-            <h1>Projetos</h1>
+
+            <h1>PROJETOS</h1>
+
             <div class="all-projects">
+
               <div class="project-box">
                 <img
                   src="img/karilu.png"
@@ -140,6 +220,46 @@
                   </button>
                 </div>
               </div>
+
+              
+              <div class="project-box">
+                <img
+                  src="img/bmw-concept.png"
+                  alt="" />
+                <div class="overlay">
+                  <h3>BMW Concept</h3>
+                  <button class="more-btn">
+                    <span>Site em construção</span>
+                  </button>
+                </div>
+              </div>
+
+              
+              <div class="project-box">
+                <img
+                  src="img/cs2.png"
+                  alt="" />
+                <div class="overlay">
+                  <h3>CS2 Concept</h3>
+                  <button class="more-btn">
+                    <span>Site em construção</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="project-box">
+                <img
+                  src="img/elocria.png"
+                  alt="" />
+                <div class="overlay">
+                  <h3>Elocria (2022)</h3>
+                  <button class="more-btn">
+                    <span>Site em RE-construção</span>
+                  </button>
+                </div>
+              </div>
+
+
                   </button>
                 </div>
               </div>
@@ -148,6 +268,8 @@
         </div>
       </div>
     </div>
+
+
     <div class="popup" id="testimonial">
       <div class="popup-container">
         <div class="popup-header">
@@ -164,7 +286,7 @@
           </div>
         </div>
         <div class="popup-body testimonial-container">
-          <h1>Avaliações</h1>
+          <h1>AVALIAÇÕES</h1>
 
           <div class="slider-container">
             <div class="swiper">
@@ -289,7 +411,7 @@
             </ul> <br>
 
             <center>
-          Tiradas diretamente do &nbsp;<a href="https://linkedin.com/in/eduardotoomazs" target="_blank" ><img src="https://www.pagetraffic.com/blog/wp-content/uploads/2022/09/white-linkedin-logo.png"  class="linkedin"></a>
+          Tiradas diretamente do &nbsp;<a href="https://linkedin.com/in/eduardotoomazs" target="_blank" ><img src="img/linkedinfull.png"  class="linkedin"></a>
           </center>
         </div>
       </div>
@@ -315,7 +437,7 @@
           </div>
         </div>
         <div class="popup-body contact-container">
-          <h1>Contato</h1>
+          <h1>CONTATO</h1>
           <p>Opa, me mande um e-mail!</p>
           <form>
             <label for="name">Nome</label>
@@ -339,11 +461,13 @@
               placeholder="Escreva algo.."
               style="height: 200px"></textarea>
 
+              <a href="mailto:eduardotoomaz@Outlook.com">
+                <button class="submit-btn more-btn" type="submit">
+                  <span class="contato"> Enviar <i class="fa-solid fa-paper-plane"></i>
+                  </span>
+                </button>
+              </a>
               
-            <button class="submit-btn more-btn" type="submit">
-              <span><a href="mailto:eduardotoomaz@Outlook.com" class="contato"> Enviar </a><i class="fa-solid fa-paper-plane"></i></span>
-            </button>
-          </a>
           </form>
         </div>
       </div>
@@ -352,9 +476,11 @@
     
   </body>
 <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+  <script src='https://unpkg.com/tilt.js@1.1.19/dest/tilt.jquery.js'></script>
   <script src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js'></script>
-<script src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js'></script>
-<script src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js'></script><script  src="./script.js"></script>
+  <script src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js'></script>
+  <script src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js'></script><script  src="./script.js"></script>
 
 </body>
 </html>
