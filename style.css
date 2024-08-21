@@ -781,7 +781,15 @@ input:-webkit-autofill:active {
   }
 
   .icon-container {
-    margin-bottom: 20px;
+    margin: auto;
+    width: auto;
+    height: auto;
+    max-width: auto;
+    max-height: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
   }
 }
 
