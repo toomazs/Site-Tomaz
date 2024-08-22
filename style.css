@@ -755,7 +755,8 @@ input:-webkit-autofill:active {
 
 }
 
-@media (max-width: 750px) {
+@media screen and (max-width: 750px) {
+
   .about-container {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 4fr;
@@ -795,9 +796,8 @@ input:-webkit-autofill:active {
     align-items: center;
   }
 
-
   .icon-container {
-    bottom: 25px;
+    bottom: 33px;
     margin: auto;
     max-width: auto;
     max-height: auto;
