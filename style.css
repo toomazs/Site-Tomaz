@@ -802,16 +802,15 @@ input:-webkit-autofill:active {
 /* RESPONSIVE */
 
 
-@media (max-width: 900px) {
+@media (max-width: 750px) and (orientation: portrait),
+       (max-width: 750px) and (orientation: landscape) {
+
+  body {
+  overflow-y: auto;
+  }
 
   .popup-body {
     padding: 30px;
-  }
-
-  .icon-container {
-    margin: auto;
-    max-width: auto;
-    max-height: auto;
   }
 
   .icon-container {
@@ -826,7 +825,12 @@ input:-webkit-autofill:active {
 
 
 
-@media (max-width: 750px) {
+@media (max-width: 750px) and (orientation: portrait),
+       (max-width: 750px) and (orientation: landscape) {
+
+  body {
+  overflow-y: auto;
+  }
 
   .about-container {
     grid-template-columns: 1fr;
@@ -868,17 +872,25 @@ input:-webkit-autofill:active {
   }
 
   .icon-container {
+    padding: auto;
     bottom: 30px;
-    margin: auto;
     max-width: auto;
     max-height: 750px;
+    margin: 0;
+    margin-top: 80px;
+    margin-bottom: 20px;
   }
 }
 
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 600px) and (orientation: portrait),
+       (max-width: 600px) and (orientation: landscape) {
+
+  body {
+  overflow-y: auto;
+  }
 
   .card {
     height: 280px;
@@ -899,7 +911,12 @@ input:-webkit-autofill:active {
 
 
 
-@media (max-width: 480px) {
+@media (max-width: 480px) and (orientation: portrait),
+       (max-width: 480px) and (orientation: landscape) {
+
+  body {
+  overflow-y: auto;
+  }
 
   .about-container .img-frame {
     grid-area: img-frame;
