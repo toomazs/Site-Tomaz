@@ -836,6 +836,15 @@ input:-webkit-autofill:active {
   }
 
 
+  h1 {
+    font-size: 1.7rem;
+  }
+  .swiper-slide {
+    max-width: auto;
+    margin: auto;
+    padding: auto;
+  }
+
 }
 
 
@@ -909,6 +918,12 @@ input:-webkit-autofill:active {
         overflow: hidden; 
       }
 
+.swiper-slide {
+  max-width: auto;
+  margin: auto;
+  padding: auto;
+}
+
 }
 
 
@@ -951,6 +966,12 @@ input:-webkit-autofill:active {
     align-items: center;
     height: 100vh; 
     overflow: hidden; 
+  }
+
+  .swiper-slide {
+    max-width: auto;
+    margin: auto;
+    padding: auto;
   }
 }
 
@@ -996,6 +1017,12 @@ input:-webkit-autofill:active {
     align-items: center;
     height: 100vh; 
     overflow: hidden; 
+  }
+
+  .swiper-slide {
+    max-width: auto;
+    margin: auto;
+    padding: auto;
   }
 
 
