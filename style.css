@@ -805,20 +805,36 @@ input:-webkit-autofill:active {
 @media (max-width: 750px) and (orientation: portrait),
        (max-width: 750px) and (orientation: landscape) {
 
-  body {
-  overflow-y: auto;
-  }
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        html, body {
+          height: 100%;
+          overflow: hidden;
+        }
+        
+        body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+        }
 
   .popup-body {
     padding: 30px;
   }
 
-  .icon-container {
-    bottom: 30px;
-    margin: auto;
-    max-width: auto;
-    max-height: 900px;
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    overflow: hidden; 
   }
+
 
 }
 
@@ -828,9 +844,23 @@ input:-webkit-autofill:active {
 @media (max-width: 750px) and (orientation: portrait),
        (max-width: 750px) and (orientation: landscape) {
 
-  body {
-  overflow-y:scroll;
-  }
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        html, body {
+          height: 100%;
+          overflow: hidden;
+        }
+        
+        body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+        }
 
   .about-container {
     grid-template-columns: 1fr;
@@ -871,20 +901,12 @@ input:-webkit-autofill:active {
     align-items: center;
   }
 
-  section {
-      padding: auto;
-      margin: auto;
-      max-width: auto;
-      max-height: auto;
-      gap: 20px
-      
-  }
-  
       section {
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: 100vh; 
+        height: 100vh; 
+        overflow: hidden; 
       }
 
 }
@@ -896,9 +918,23 @@ input:-webkit-autofill:active {
 @media (max-width: 600px) and (orientation: portrait),
        (max-width: 600px) and (orientation: landscape) {
 
-  body {
-  overflow-y: auto;
-  }
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        html, body {
+          height: 100%;
+          overflow: hidden;
+        }
+        
+        body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+        }
 
   .card {
     height: 280px;
@@ -908,11 +944,13 @@ input:-webkit-autofill:active {
     font-size: 0.9rem;
   }
 
-  .icon-container {
-    bottom: 30px;
-    margin: auto;
-    max-width: auto;
-    max-height: 600px;
+
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    overflow: hidden; 
   }
 }
 
@@ -922,9 +960,23 @@ input:-webkit-autofill:active {
 @media (max-width: 480px) and (orientation: portrait),
        (max-width: 480px) and (orientation: landscape) {
 
-  body {
-  overflow-y: auto;
-  }
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        html, body {
+          height: 100%;
+          overflow: hidden;
+        }
+        
+        body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+        }
 
   .about-container .img-frame {
     grid-area: img-frame;
@@ -937,11 +989,14 @@ input:-webkit-autofill:active {
     height: 180px;
   }
 
-  .icon-container {
-    bottom: 30px;
-    margin: auto;
-    max-width: auto;
-    max-height: 480px;
+
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    overflow: hidden; 
   }
+
 
 }
