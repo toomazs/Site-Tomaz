@@ -961,6 +961,20 @@ input:-webkit-autofill:active {
   animation: scaleup 0.3s ease-in-out;
 }
 
+video {
+  width: 0%;
+}
+
+body {
+  background-image: url(img/background.jpg);
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
 @keyframes scaleup {
   from {
     transform: scale(1);
@@ -969,6 +983,8 @@ input:-webkit-autofill:active {
   to {
     transform: scale(1.3);
   }
+
+
 
 
 }
