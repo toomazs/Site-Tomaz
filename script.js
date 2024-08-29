@@ -197,13 +197,20 @@ languageSwitcher.addEventListener('click', (event) => {
     });
   });
 
-function updateTranslations(lang) {
-  // Update translations for all tabs
-  elementsToTranslate.forEach(element => {
-    const translationKey = element.getAttribute('data-translate');
-    element.innerHTML = translations[lang][translationKey];
-  });
-}
+  function updateTranslations(lang) {
+    // Update translations for all tabs
+    const elementsToTranslate = document.querySelectorAll('[data-translate]');
+    elementsToTranslate.forEach(element => {
+      const translationKey = element.getAttribute('data-translate');
+      element.innerHTML = translations[lang][translationKey];
+      element.classList.add('translate-transition');
+      element.classList.add('fade-in');
+      setTimeout(() => {
+        element.classList.remove('fade-in');
+      }, 500); // tempo de animação em milissegundos
+    });
+  
+  }
   
   // Add event listener to language switcher
   document.querySelectorAll('.flag').forEach(flag => {
@@ -225,7 +232,7 @@ function updateTranslations(lang) {
 
   $(".popup").tilt({
     maxTilt: 15,
-    perspective: 2500,
+    perspective: 3000,
     easing: "cubic-bezier(.03,.98,.52,.99)",
     speed: 500,
     glare: false,
