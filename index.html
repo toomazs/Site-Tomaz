@@ -461,7 +461,8 @@
         <div class="popup-body contact-container">
           <h1>CONTATO</h1>
           <p>Me mande um e-mail.</p>
-          <form method="POST" action="./email.php">
+
+          <form class="form" method="POST" action="./email.php">
 
             <label for="name">Name</label>
             <input
@@ -477,15 +478,16 @@
               name="email"
               placeholder="Your e-mail.." />
 
-            <label for="subject">Subject</label>
+            <label for="message">Subject</label>
             <textarea
-              id="subject"
-              name="subject"
+              id="message"
+              name="message"
               placeholder="Type something.."
               style="height: 200px"></textarea>
 
                 <button class="submit-btn more-btn" type="submit">
-                  <span class="contato"> Send <i class="fa-solid fa-paper-plane"></i>
+                  
+                  <span class="contato"> Send <i class="fa-solid fa-paper-plane"></i> 
                   </span>
                 </button>
               
