@@ -1,11 +1,11 @@
-### Meu Site. 💫
+### my site 💫
 
-👨🏽‍💻 • Bem-vindos ao meu site-portfólio. Passei alguns dias pegando exemplos, estudando & programando para deixar esse projeto mais estético e moderno possível, mas sem também esquecer da praticidade e da responsividade. <br>
+👨🏽‍💻 • welcome to my portfolio site! i spent a few days checking out examples, learning, and coding to make this project as clean, modern, and responsive as possible — without forgetting usability.  
 
-📱 • A ideia do site é inspirada em simular um sistema operacional do macOS, com a área de trabalho e a barra de tarefas, aonde em cada seção é possível fechar, minimizar ou até maximizar as abas. <br>
+📱 • the idea behind the site is to simulate a macOS-like experience, with a desktop and taskbar where you can open, minimize, maximize, and close different sections.  
 
-☄️ • Espero que gostem e, ao navegarem pelo meu site-portfólio, vocês possam entender mais sobre o meu trabalho e o meu potencial como um Front-end Developer. <br>
+☄️ • hope you enjoy exploring it! as you click around, you’ll get a better idea of my work and potential as a front-end developer.  
 
-📃 • Foi usado jQuery, Tilt.js, Swiper <br>
+📃 • built with jquery, tilt.js, and swiper.  
 
-Acesse o site on-line: <a href="https://site-tomaz.vercel.app/"><em><b>EDUARDO TOMAZ</b></em></a>
+check it out here: <a href="https://site-tomaz.vercel.app/"><em><b>eduardo tomaz</b></em></a>
