@@ -1,11 +1,9 @@
-### my site 💫
+## Meu Site-Portfólio
 
-👨🏽‍💻 • welcome to my portfolio site! i spent a few days checking out examples, learning, and coding to make this project as clean, modern, and responsive as possible — without forgetting usability.  
+Trabalho realizado em um total de 1 a 2 semanas para demonstrar meu potencial e projetos como Desenvolvedor Front-End. O conceito do site é inspirado em uma simulação do sistema operacional macOS, com uma área de trabalho e uma barra de tarefas, onde em cada seção é possível fechar, minimizar ou até mesmo maximizar as abas.
 
-📱 • the idea behind the site is to simulate a macOS-like experience, with a desktop and taskbar where you can open, minimize, maximize, and close different sections.  
+Foi criado com o objetivo de proporcionar ao usuário uma compreensão do meu trabalho e experiência. O site apresenta minha stack de tecnologias, projetos, depoimentos e uma seção de contato.
 
-☄️ • hope you enjoy exploring it! as you click around, you’ll get a better idea of my work and potential as a front-end developer.  
+Web design · Swiper.js · JQuery · Tilt.js · HTML5, CSS3 & JavaScript
 
-📃 • built with jquery, tilt.js, and swiper.  
-
-check it out here: <a href="https://site-tomaz.vercel.app/"><em><b>eduardo tomaz</b></em></a>
+Veja o site aqui: <a href="https://site-tomaz.vercel.app/"><em><b>Eduardo Tomaz</b></em></a>
