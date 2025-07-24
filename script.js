@@ -1,12 +1,15 @@
-// Seletores de elementos do DOM
 const iconBoxes = document.querySelectorAll(".icon-box");
 const iconBoxContainers = document.querySelectorAll(".icon-container");
 const maximizeBtns = document.querySelectorAll(".maximize-btn");
 const body = document.querySelector("body");
 const closeBtns = document.querySelectorAll(".close-btn");
 
-// Objeto com todas as traduções atualizadas
+
+
+
 const translations = {
+
+  // Traducao EN
   en: {
     title: "Eduardo Tomaz",
     description: "Hey there! I am a <strong>Software Engineer, Full Stack Developer</strong> and also a <strong>Computer Science</strong> undergraduate student. <br>See more about me & my work by clicking the buttons below! <br> <br>",
@@ -33,6 +36,8 @@ const translations = {
     message1: "Your message",
     send: "Send <i class='fa-solid fa-paper-plane'></i> ",
   },
+
+  // Traducao PT
   pt: {
     title: "Eduardo Tomaz",
     description: "Opa, salve! Prazer, sou <strong>Engenheiro de Software, Desenvolvedor Full Stack</strong> e também um graduando em <strong>Ciências da Computação</strong>. <br>Veja mais sobre mim e meu trabalho clicando nos botões abaixo! <br> <br>",
@@ -52,15 +57,6 @@ const translations = {
     r7: "Dei feedbacks de erro e foi arrumado em minutos. Site limpo e esteticamente bonito.",
     r8: "Site muito bonito e moderno, Dudu! Parabéns, Ótimo passo!!",
     r9: "Pô! Sensacional, mano! Ficou demais, vou no LinkedIn pra acompanhar também.",
-    role1: "Colaborador na Multifibra",
-    role2: "Colaborador na Multifibra",
-    role3: "Colaboradora na Multifibra",
-    role4: "Cliente",
-    role5: "Cliente",
-    role6: "Colaborador na Multifibra",
-    role7: "Cliente",
-    role8: "Familiar",
-    role9: "Cliente",
     contato: "CONTATO",
     contatop: "Me mande uma mensagem!",
     name1: "Seu nome",
@@ -68,6 +64,9 @@ const translations = {
     message1: "Sua mensagem",
     send: "Enviar <i class='fa-solid fa-paper-plane'></i> ",
   },
+
+
+  // Traducao JP
   jp: {
     title: "Eduardo Tomaz",
     description: "こんにちは！私は<strong>ソフトウェアエンジニア、フルスタック開発者</strong>であり、<strong>コンピュータサイエンス</strong>の学部生でもあります。<br>下のボタンをクリックして、私と私の仕事についてもっと知ってください。<br> <br>",
@@ -87,15 +86,6 @@ const translations = {
     r7: "エラーのフィードバックを送ったところ、数分で修正されました。クリーンで審美的に美しいウェブサイト。",
     r8: "とても美しくてモダンなウェブサイト、Du!おめでとうございます、素晴らしい一歩です!!",
     r9: "おお！センセーショナルだよ、兄弟！素晴らしいですね。私も Linkedin を設定して、あなたをフォローするつもりです。",
-    role1: "Multifibraの協力者",
-    role2: "Multifibraの協力者",
-    role3: "Multifibraの協力者",
-    role4: "クライアント",
-    role5: "クライアント",
-    role6: "Multifibraの協力者",
-    role7: "クライアント",
-    role8: "家族",
-    role9: "クライアント",
     contato: "接触",
     contatop: "メッセージを送ってください！",
     name1: "あなたの名前",
@@ -105,9 +95,6 @@ const translations = {
   },
 };
 
-// --- Funções para controlar os Popups ---
-
-// Fechar popup ao clicar no botão de fechar
 closeBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     let modal = btn.closest(".popup");
@@ -122,7 +109,6 @@ closeBtns.forEach((btn) => {
   });
 });
 
-// Abrir popup ao clicar em um icon-box
 iconBoxes.forEach((btn) => {
   btn.addEventListener("click", () => {
     let modalId = btn.getAttribute("data-modal");
@@ -143,7 +129,6 @@ iconBoxes.forEach((btn) => {
   });
 });
 
-// Fechar popup ao clicar fora dele
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("popup")) {
     e.target.classList.add('closing');
@@ -154,7 +139,6 @@ document.addEventListener("click", (e) => {
   }
 });
 
-// Maximizar/minimizar popup
 maximizeBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     let modal = btn.closest(".popup");
@@ -173,7 +157,7 @@ maximizeBtns.forEach((btn) => {
   });
 });
 
-// --- Lógica de Tradução (Corrigida e Simplificada) ---
+// --- Lógica de Tradução ---
 
 function updateTranslations(lang) {
   const elementsToTranslate = document.querySelectorAll('[data-translate]');
@@ -206,7 +190,6 @@ document.addEventListener("DOMContentLoaded", function() {
     body.classList.add("prevent-background-scroll");
   }
 
-  // Define o idioma padrão com base no HTML original (inglês, neste caso)
   updateTranslations('en');
 });
 
@@ -227,10 +210,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
   var swiper = new Swiper(".swiper", {
     preventClicks: true,
-    noSwiping: false, // MUDANÇA: Permitir swipe para não travar
+    noSwiping: false, 
     freeMode: false,
-    loop: true, // ADICIONADO: Loop infinito resolve o problema de não conseguir arrastar
-    centeredSlides: false, // Manter slides alinhados à esquerda
+    loop: true, 
+    centeredSlides: false, 
     spaceBetween: 30,
     navigation: {
       nextEl: ".next",
@@ -241,7 +224,6 @@ document.addEventListener("DOMContentLoaded", function() {
       thresholdDelta: 50,
       sensitivity: 1,
     },
-    // SOLUÇÃO: Usar 'auto' mantém o tamanho natural dos cards
     breakpoints: {
       0: { 
         slidesPerView: 1,
@@ -252,31 +234,26 @@ document.addEventListener("DOMContentLoaded", function() {
         spaceBetween: 25
       },
       1100: { 
-        slidesPerView: 'auto', // MUDANÇA PRINCIPAL: cards mantêm tamanho natural
+        slidesPerView: 'auto', 
         spaceBetween: 30
       },
       1600: { 
-        slidesPerView: 'auto', // MUDANÇA PRINCIPAL: cards mantêm tamanho natural
+        slidesPerView: 'auto', 
         spaceBetween: 35
       },
-      2048: { // NOVO: Breakpoint para monitores 2K+
+      2048: { 
         slidesPerView: 'auto',
         spaceBetween: 40
       }
     },
     
-    // OPCIONAL: Configurações adicionais para melhor UX
     grabCursor: true,
-    watchOverflow: true, // Desabilita navegação se todos os slides estão visíveis
-    
-    // Controla a velocidade de transição
+    watchOverflow: true, 
     speed: 600,
     
-    // Permite arrastar mesmo quando chegou no final
     resistance: true,
     resistanceRatio: 0.85,
     
-    // Para debug - remove depois de testar
     on: {
       reachEnd: function () {
         console.log('Chegou no final dos slides');
@@ -287,7 +264,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-// OPCIONAL: Função para recalcular quando a janela redimensionar
 window.addEventListener('resize', function() {
     swiper.update();
 });
