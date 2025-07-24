@@ -1,9 +1,111 @@
+// Seletores de elementos do DOM
 const iconBoxes = document.querySelectorAll(".icon-box");
 const iconBoxContainers = document.querySelectorAll(".icon-container");
 const maximizeBtns = document.querySelectorAll(".maximize-btn");
 const body = document.querySelector("body");
-const popup = document.querySelector('.popup');
 const closeBtns = document.querySelectorAll(".close-btn");
+
+// Objeto com todas as traduções atualizadas
+const translations = {
+  en: {
+    title: "Eduardo Tomaz",
+    description: "Hey there! I am a <strong>Software Engineer, Full Stack Developer</strong> and also a <strong>Computer Science</strong> undergraduate student. <br>See more about me & my work by clicking the buttons below! <br> <br>",
+    skills: "TECH STACK",
+    projects: "REAL PROJECTS",
+    repo: "Repository",
+    online: "Website Online",
+    certificates: "CERTIFICATES",
+    cred: "Credential",
+    review: "REVIEWS",
+    r1: "Working with Eduardo was a pleasure, everything with mastery in a great period of time.",
+    r2: "Eduardo has vast knowledge and is a proactive and responsible person.",
+    r3: "Eduardo is committed to the challenges proposed, always looking for the best to offer.",
+    r4: "My website turned out perfectly as I requested. Responsive and aesthetic! Very good!",
+    r5: "The project turned out so great! Comply with what you propose.",
+    r6: "Eduardo Tomaz's project was well worked and thought out.",
+    r7: "I gave error feedbacks and it was fixed in just minutes. Clean and aesthetically beautiful website.",
+    r8: "Very beautiful and modern website, Du! Congratulations, Great step!",
+    r9: "Wow! Sensational, bro! It's awesome, I'm going to set up a Linkedin to follow you there too.",
+    contato: "CONTACT",
+    contatop: "Feel free to contact me.",
+    name1: "Your name",
+    email1: "Your e-mail",
+    message1: "Your message",
+    send: "Send <i class='fa-solid fa-paper-plane'></i> ",
+  },
+  pt: {
+    title: "Eduardo Tomaz",
+    description: "Opa, salve! Prazer, sou <strong>Engenheiro de Software, Desenvolvedor Full Stack</strong> e também um graduando em <strong>Ciências da Computação</strong>. <br>Veja mais sobre mim e meu trabalho clicando nos botões abaixo! <br> <br>",
+    skills: "HABILIDADES",
+    projects: "PROJETOS REAIS",
+    repo: "Repositório",
+    online: "Website Online",
+    certificates: "CERTIFICADOS",
+    cred: "Credencial",
+    review: "AVALIAÇÕES",
+    r1: "Trabalhar com o Eduardo foi excepcional, Tudo com maestria em um período de tempo ótimo.",
+    r2: "Eduardo possui vasto conhecimento, e é uma pessoa proativa e responsável.",
+    r3: "Eduardo é comprometido com os desafios propostos, sempre buscando o melhor para oferecer.",
+    r4: "Meu site ficou perfeitamente como eu pedi. Responsivo e estético! Muito bom!",
+    r5: "O projeto ficou ótimo! Cumpre com o que propõe.",
+    r6: "O Projeto de Eduardo Tomaz foi bem trabalhado e pensado.",
+    r7: "Dei feedbacks de erro e foi arrumado em minutos. Site limpo e esteticamente bonito.",
+    r8: "Site muito bonito e moderno, Dudu! Parabéns, Ótimo passo!!",
+    r9: "Pô! Sensacional, mano! Ficou demais, vou no LinkedIn pra acompanhar também.",
+    role1: "Colaborador na Multifibra",
+    role2: "Colaborador na Multifibra",
+    role3: "Colaboradora na Multifibra",
+    role4: "Cliente",
+    role5: "Cliente",
+    role6: "Colaborador na Multifibra",
+    role7: "Cliente",
+    role8: "Familiar",
+    role9: "Cliente",
+    contato: "CONTATO",
+    contatop: "Me mande uma mensagem!",
+    name1: "Seu nome",
+    email1: "Seu e-mail",
+    message1: "Sua mensagem",
+    send: "Enviar <i class='fa-solid fa-paper-plane'></i> ",
+  },
+  jp: {
+    title: "Eduardo Tomaz",
+    description: "こんにちは！私は<strong>ソフトウェアエンジニア、フルスタック開発者</strong>であり、<strong>コンピュータサイエンス</strong>の学部生でもあります。<br>下のボタンをクリックして、私と私の仕事についてもっと知ってください。<br> <br>",
+    skills: "スキル",
+    projects: "プロジェクト",
+    repo: "リポジトリ",
+    online: "オンラインウェブサイト",
+    certificates: "証明書",
+    cred: "資格情報",
+    review: "レビュー",
+    r1: "エドゥアルドとの仕事は並外れたもので、素晴らしい期間の中ですべてが熟達していました。",
+    r2: "エドゥアルドは豊富な知識を持ち、積極的で責任感のある人物です。",
+    r3: "エドゥアルドは提案された課題に全力で取り組み、常に最善のものを提供できるよう努めています。",
+    r4: "私のウェブサイトは私が要求したとおりに完璧に完成しました。反応性が高く、見た目も美しい！とても良い！",
+    r5: "プロジェクトは素晴らしいものになりました！あなたが提案したものに従います。",
+    r6: "Eduardo Tomaz のプロジェクトはよく練られ、よく考えられていました。",
+    r7: "エラーのフィードバックを送ったところ、数分で修正されました。クリーンで審美的に美しいウェブサイト。",
+    r8: "とても美しくてモダンなウェブサイト、Du!おめでとうございます、素晴らしい一歩です!!",
+    r9: "おお！センセーショナルだよ、兄弟！素晴らしいですね。私も Linkedin を設定して、あなたをフォローするつもりです。",
+    role1: "Multifibraの協力者",
+    role2: "Multifibraの協力者",
+    role3: "Multifibraの協力者",
+    role4: "クライアント",
+    role5: "クライアント",
+    role6: "Multifibraの協力者",
+    role7: "クライアント",
+    role8: "家族",
+    role9: "クライアント",
+    contato: "接触",
+    contatop: "メッセージを送ってください！",
+    name1: "あなたの名前",
+    email1: "あなたのメールアドレス",
+    message1: "あなたのメッセージ",
+    send: "送信 <i class='fa-solid fa-paper-plane'></i> ",
+  },
+};
+
+// --- Funções para controlar os Popups ---
 
 // Fechar popup ao clicar no botão de fechar
 closeBtns.forEach((btn) => {
@@ -16,20 +118,16 @@ closeBtns.forEach((btn) => {
       iconBoxContainers.forEach((container) => {
         container.style.display = "flex";
       });
-    }, 500); // tempo de animação em milissegundos
+    }, 500);
   });
 });
 
 // Abrir popup ao clicar em um icon-box
 iconBoxes.forEach((btn) => {
   btn.addEventListener("click", () => {
-    let modal = btn.getAttribute("data-modal");
-    let currentModal = document.getElementById(modal);
-    currentModal.style.display = "block";
-    currentModal.classList.remove("closing");
-    body.classList.add("prevent-background-scroll");
-
-    // Fechar outros popups que estejam abertos
+    let modalId = btn.getAttribute("data-modal");
+    let currentModal = document.getElementById(modalId);
+    
     document.querySelectorAll('.popup').forEach((otherModal) => {
       if (otherModal !== currentModal) {
         otherModal.classList.add('closing');
@@ -38,6 +136,10 @@ iconBoxes.forEach((btn) => {
         }, 500);
       }
     });
+
+    currentModal.style.display = "block";
+    currentModal.classList.remove("closing");
+    body.classList.add("prevent-background-scroll");
   });
 });
 
@@ -57,178 +159,61 @@ maximizeBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     let modal = btn.closest(".popup");
     let container = modal.querySelector(".popup-container");
-    let body = modal.querySelector(".popup-body");
-
-    if (modal.classList.contains("maximized")) {
-      container.style.width = "min(900px, 90%)";
-      container.style.top = "45%";
-      body.style.height = "70vh";
-    } else {
-      container.style.width = "90%";
-      container.style.top = "50%";
-      body.style.height = "80vh";
-    }
+    let popupBody = modal.querySelector(".popup-body");
 
     modal.classList.toggle("maximized");
-    body.classList.toggle("prevent-scroll");
+    if (modal.classList.contains("maximized")) {
+      container.style.width = "95%";
+      popupBody.style.height = "80vh";
+    } else {
+      container.style.width = "min(900px, 90%)";
+      popupBody.style.height = "70vh";
+    }
+    popupBody.classList.toggle("prevent-scroll");
   });
 });
 
+// --- Lógica de Tradução (Corrigida e Simplificada) ---
 
+function updateTranslations(lang) {
+  const elementsToTranslate = document.querySelectorAll('[data-translate]');
+  elementsToTranslate.forEach(element => {
+    const key = element.getAttribute('data-translate');
+    if (translations[lang] && translations[lang][key]) {
+      element.innerHTML = translations[lang][key];
+      element.classList.add('fade-in');
+      setTimeout(() => {
+        element.classList.remove('fade-in');
+      }, 500);
+    }
+  });
+}
 
-const translations = {
-  en: {
-    title: "Eduardo Tomaz",
-    description: "Hey there! I am a <strong>Front-End Developer</strong> and also a <strong>Computer Science</strong> undergraduate student. <br> I created this site inspired by the macOS interface <img src='img/apple.png' id='icone-apple'>. See more about me & my work by clicking the buttons below! <br> <br> ",
-    skills: "TECH STACK",
-    projects: "PROJECTS",
-    underc: "Under construction.",
-    online: "Website Online",
-    review: "REVIEWS",
-    r1: "Working with Eduardo was a pleasure, everything with mastery in a great period of time.",
-    r2: "Eduardo has vast knowledge and is a proactive and responsible person.",
-    r3: "Eduardo is committed to the challenges proposed, always looking for the best to offer.",
-    r4: "My website turned out perfectly as I requested. Responsive and aesthetic! Very good!",
-    r5: "The project turned out so great! Comply with what you propose.",
-    r6: "Eduardo Tomaz's project was well worked and thought out.",
-    r7: "I gave error feedbacks and it was fixed in just minutes. Clean and aesthetically beautiful website.",
-    r8: "Very beautiful and modern website, Du! Congratulations, Great step!",
-    r9: "Wow! Sensational, bro! It's awesome, I'm going to set up a Linkedin to follow you there too.",
-    linkedinpage: "From&nbsp; <a href='https://linkedin.com/in/eduardotoomazs' target='_blank' ><img src='img/linkedinfull.png' class='linkedin'>",
-    contato: "CONTACT",
-    contatop: "Feel free to contact me.",
-    name1: "Your name",
-    email1: "Your e-mail",
-    message1: "Subject",
-    send: "Send <i class='fa-solid fa-paper-plane'></i> ",
-  },
-
-  pt: {
-    title: "Eduardo Tomaz",
-    description: "Opa! Prazer, seja bem-vindo ao meu site! <br>Sou <strong>Front-End Developer</strong> e também um Graduando de <strong>Ciências da Computação.</strong> <br>Fiz esse site me inspirando na interface do macOS <img src='img/apple.png' id='icone-apple'>. Saiba mais um pouco sobre mim clicando nos botões abaixo! <br> <br>",
-    skills: "HABILIDADES",
-    projects: "PROJETOS",
-    underc: "Site em construção.",
-    online: "Website Online",
-    review: "AVALIAÇÕES",
-    r1: "Trabalhar com o Eduardo foi excepcional, Tudo com maestria em um período de tempo ótimo.",
-    r2: "Eduardo possui vasto conhecimento, e é uma pessoa proativa e responsável.",
-    r3: "Eduardo é comprometido com os desafios propostos, sempre buscando o melhor para oferecer.",
-    r4: "Meu site ficou perfeitamente como eu pedi. Responsivo e estético! Muito bom!",
-    r5: "O projeto ficou ótimo! Cumpre com o que propõe.",
-    r6: "O Projeto de Eduardo Tomaz foi bem trabalhado e pensado.",
-    r7: "Dei feedbacks de erro e foi arrumado em minutos. Site limpo e esteticamente bonito.",
-    r8: "Site muito bonito e moderno, Dudu! Parabéns, Ótimo passo!!",
-    r9: "Pô! Sensacional, mano! Ficou demais, vou no LinkedIn pra acompanhar também.",
-    linkedinpage: "Tiradas do&nbsp; <a href='https://linkedin.com/in/eduardotoomazs' target='_blank' ><img src='img/linkedinfull.png' class='linkedin'>",
-    contato: "CONTATO",
-    contatop: "Me mande uma mensagem!",
-    name1: "Seu nome",
-    email1: "Seu e-mail",
-    message1: "Sua mensagem",
-    send: "Enviar <i class='fa-solid fa-paper-plane'></i> ",
-  },
-
-  jp: {
-    title: "Eduardo Tomaz",
-    description: "こんにちは！初めまして、私のウェブサイトへようこそ！ <br>私は<strong>フロントエンド開発者</strong>で、<strong>コンピュータ サイエンス</strong>も勉強しています。<br>このサイトは、macOS インターフェイス からインスピレーションを得て作成しました。 <img src='img/apple.png' id='icone-apple'>。下のボタンをクリックして、私についてもう少し詳しくご覧ください。 <br> <br>",
-    skills: "スキル",
-    projects: "プロジェクト",
-    underc: "ウェブサイトは建設中です",
-    online: "オンラインウェブサイト",
-    review: "レビュー",
-    r1: "エドゥアルドとの仕事は並外れたもので、素晴らしい期間の中ですべてが熟達していました。",
-    r2: "エドゥアルドは豊富な知識を持ち、積極的で責任感のある人物です。",
-    r3: "エドゥアルドは提案された課題に全力で取り組み、常に最善のものを提供できるよう努めています。",
-    r4: "私のウェブサイトは私が要求したとおりに完璧に完成しました。反応性が高く、見た目も美しい！とても良い！",
-    r5: "プロジェクトは素晴らしいものになりました！あなたが提案したものに従います。",
-    r6: "Eduardo Tomaz のプロジェクトはよく練られ、よく考えられていました。",
-    r7: "エラーのフィードバックを送ったところ、数分で修正されました。クリーンで審美的に美しいウェブサイト。",
-    r8: "とても美しくてモダンなウェブサイト、Du!おめでとうございます、素晴らしい一歩です!!",
-    r9: "おお！センセーショナルだよ、兄弟！素晴らしいですね。私も Linkedin を設定して、あなたをフォローするつもりです。",
-    linkedinpage: "からのレビュー&nbsp; <a href='https://linkedin.com/in/eduardotoomazs' target='_blank' ><img src='img/linkedinfull.png' class='linkedin'>",
-    contato: "接触",
-    contatop: "メッセージを送ってください！",
-    name1: "あなたの名前",
-    email1: "あなたのメールアドレス",
-    message1: "あなたのメッセージ",
-    send: "送信 <i class='fa-solid fa-paper-plane'></i> ",
-  },
-};
-
-
-
-const languageSwitcher = document.querySelector('.language-switcher');
-const elementsToTranslate = document.querySelectorAll('[data-translate]');
-const languageSwitchers = document.querySelectorAll('.language-switcher');
-
-languageSwitchers.forEach(languageSwitcher => {
-  languageSwitcher.addEventListener('click', (event) => {
-    const lang = event.target.id; // 'pt' or 'en'
+document.querySelectorAll('.flag').forEach(flag => {
+  flag.addEventListener('click', (event) => {
+    event.preventDefault();
+    const lang = event.currentTarget.id;
     updateTranslations(lang);
   });
 });
 
-function updateTranslations(lang) {
-  // Update translations for all tabs
-  const elementsToTranslate = document.querySelectorAll('[data-translate]');
-  elementsToTranslate.forEach(element => {
-    const translationKey = element.getAttribute('data-translate');
-    element.innerHTML = translations[lang][translationKey];
-  });
-}
+// --- Lógica de Inicialização ---
 
-languageSwitcher.addEventListener('click', (event) => {
-  const lang = event.target.id; // 'pt' ou 'en'
-
-  elementsToTranslate.forEach(element => {
-    const translationKey = element.getAttribute('data-translate');
-    element.innerHTML = translations[lang][translationKey];
-  });
-
-  
-  document.addEventListener('DOMContentLoaded', () => {
-    const languageSwitchers = document.querySelectorAll('.language-switcher');
-    languageSwitchers.forEach(languageSwitcher => {
-      languageSwitcher.addEventListener('click', (event) => {
-        const lang = event.target.id; // 'pt' or 'en'
-        updateTranslations(lang);
-      });
-    });
-  });
-
-  function updateTranslations(lang) {
-    // Update translations for all tabs
-    const elementsToTranslate = document.querySelectorAll('[data-translate]');
-    elementsToTranslate.forEach(element => {
-      const translationKey = element.getAttribute('data-translate');
-      element.innerHTML = translations[lang][translationKey];
-      element.classList.add('translate-transition');
-      element.classList.add('fade-in');
-      setTimeout(() => {
-        element.classList.remove('fade-in');
-      }, 500); // tempo de animação em milissegundos
-    });
-  
+document.addEventListener("DOMContentLoaded", function() {
+  const aboutPopup = document.getElementById("about");
+  if (aboutPopup) {
+    aboutPopup.style.display = "block";
+    body.classList.add("prevent-background-scroll");
   }
-  
-  // Add event listener to language switcher
-  document.querySelectorAll('.flag').forEach(flag => {
-    flag.addEventListener('click', event => {
-      const lang = event.target.id; // 'pt' or 'en'
-      updateTranslations(lang);
-    });
-  });
 
+  // Define o idioma padrão com base no HTML original (inglês, neste caso)
+  updateTranslations('en');
 });
 
+// --- Inicialização de Plugins jQuery ---
 
-
-
-
-( function( $ ) {
-
-	"use strict";
+(function($) {
+  "use strict";
 
   $(".popup").tilt({
     maxTilt: 15,
@@ -239,40 +224,71 @@ languageSwitcher.addEventListener('click', (event) => {
     maxGlare: 0.2,
     scale: 1.01
   });
-  
 
-// Swiper
-var swiper = new Swiper(".swiper", {
-  preventClicks: true,
-  noSwiping: true,
-  freeMode: false,
-  spaceBetween: 10,
-  navigation: {
-    nextEl: ".next",
-    prevEl: ".prev",
-  },
-  mousewheel: {
-    invert: false,
-    thresholdDelta: 50,
-    sensitivity: 1,
-  },
-  breakpoints: {
-    0: {
-      slidesPerView: 1,
+  var swiper = new Swiper(".swiper", {
+    preventClicks: true,
+    noSwiping: false, // MUDANÇA: Permitir swipe para não travar
+    freeMode: false,
+    loop: true, // ADICIONADO: Loop infinito resolve o problema de não conseguir arrastar
+    centeredSlides: false, // Manter slides alinhados à esquerda
+    spaceBetween: 30,
+    navigation: {
+      nextEl: ".next",
+      prevEl: ".prev",
     },
-    680: {
-      slidesPerView: 2,
+    mousewheel: {
+      invert: false,
+      thresholdDelta: 50,
+      sensitivity: 1,
     },
-    1100: {
-      slidesPerView: 3,
+    // SOLUÇÃO: Usar 'auto' mantém o tamanho natural dos cards
+    breakpoints: {
+      0: { 
+        slidesPerView: 1,
+        spaceBetween: 20
+      },
+      680: { 
+        slidesPerView: 2,
+        spaceBetween: 25
+      },
+      1100: { 
+        slidesPerView: 'auto', // MUDANÇA PRINCIPAL: cards mantêm tamanho natural
+        spaceBetween: 30
+      },
+      1600: { 
+        slidesPerView: 'auto', // MUDANÇA PRINCIPAL: cards mantêm tamanho natural
+        spaceBetween: 35
+      },
+      2048: { // NOVO: Breakpoint para monitores 2K+
+        slidesPerView: 'auto',
+        spaceBetween: 40
+      }
     },
-    1600: {
-      slidesPerView: 4,
-    },
-  },
-} )
-}( jQuery ) );
+    
+    // OPCIONAL: Configurações adicionais para melhor UX
+    grabCursor: true,
+    watchOverflow: true, // Desabilita navegação se todos os slides estão visíveis
+    
+    // Controla a velocidade de transição
+    speed: 600,
+    
+    // Permite arrastar mesmo quando chegou no final
+    resistance: true,
+    resistanceRatio: 0.85,
+    
+    // Para debug - remove depois de testar
+    on: {
+      reachEnd: function () {
+        console.log('Chegou no final dos slides');
+      },
+      reachBeginning: function () {
+        console.log('Chegou no início dos slides');
+      }
+    }
+});
 
-
-
-
+// OPCIONAL: Função para recalcular quando a janela redimensionar
+window.addEventListener('resize', function() {
+    swiper.update();
+});
+}(jQuery));
