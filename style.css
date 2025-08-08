@@ -155,7 +155,7 @@ section {
 
 .icon-container {
     z-index: 1000;
-    position: absolute;
+    position: fixed; /* Linha alterada para corrigir a posição */
     bottom: 24px;
     left: 50%;
     transform: translateX(-50%);
