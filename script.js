@@ -4,9 +4,6 @@ const maximizeBtns = document.querySelectorAll(".maximize-btn");
 const body = document.querySelector("body");
 const closeBtns = document.querySelectorAll(".close-btn");
 
-
-
-
 const translations = {
 
   // Traducao EN
@@ -19,6 +16,16 @@ const translations = {
     online: "Website Online",
     certificates: "CERTIFICATES",
     cred: "Credential",
+    experienceTitle: "EXPERIENCES",
+    jobTitle: "Technical Support Intern",
+    jobCompany: "N-Multifibra · Internship",
+    jobMeta: "Sep 2024 - Present",
+    jobNote: "Cotia, São Paulo, Brazil · On-site",
+    jobResp1: "Provide technical support to clients by phone, email, and chat;",
+    jobResp2: "Diagnose and resolve network connectivity and configuration issues;",
+    jobResp3: "Assist in the installation and configuration of network equipment;",
+    jobResp4: "Log and track support tickets in the internal system;",
+    jobResp5: "Collaborate with the team to identify trends and improvements in support processes.",
     review: "REVIEWS",
     r1: "Working with Eduardo was a pleasure, everything with mastery in a great period of time.",
     r2: "Eduardo has vast knowledge and is a proactive and responsible person.",
@@ -47,6 +54,16 @@ const translations = {
     online: "Website Online",
     certificates: "CERTIFICADOS",
     cred: "Credencial",
+    experienceTitle: "EXPERIÊNCIAS",
+    jobTitle: "Estagiário de Suporte Técnico",
+    jobCompany: "N-Multifibra · Estágio",
+    jobMeta: "set de 2024 - o momento",
+    jobNote: "Cotia, São Paulo, Brasil · Presencial",
+    jobResp1: "Prestar suporte técnico aos clientes por telefone, e-mail e chat;",
+    jobResp2: "Diagnosticar e resolver problemas de conectividade e configuração de rede;",
+    jobResp3: "Auxiliar na instalação e configuração de equipamentos de rede;",
+    jobResp4: "Registrar e acompanhar chamados de suporte no sistema interno;",
+    jobResp5: "Colaborar com a equipe para identificar tendências e melhorias nos processos de suporte.",
     review: "AVALIAÇÕES",
     r1: "Trabalhar com o Eduardo foi excepcional, Tudo com maestria em um período de tempo ótimo.",
     r2: "Eduardo possui vasto conhecimento, e é uma pessoa proativa e responsável.",
@@ -76,6 +93,16 @@ const translations = {
     online: "オンラインウェブサイト",
     certificates: "証明書",
     cred: "資格情報",
+    experienceTitle: "職務経歴",
+    jobTitle: "テクニカルサポートインターン",
+    jobCompany: "N-Multifibra · インターンシップ",
+    jobMeta: "2024年9月 - 現在",
+    jobNote: "コチア、サンパウロ、ブラジル · 対面",
+    jobResp1: "電話、メール、チャットでクライアントに技術サポートを提供する。",
+    jobResp2: "ネットワーク接続と設定の問題を診断および解決する。",
+    jobResp3: "ネットワーク機器の設置と設定を支援する。",
+    jobResp4: "社内システムでサポートチケットを記録および追跡する。",
+    jobResp5: "チームと協力して、サポートプロセスの傾向と改善点を特定する。",
     review: "レビュー",
     r1: "エドゥアルドとの仕事は並外れたもので、素晴らしい期間の中ですべてが熟達していました。",
     r2: "エドゥアルドは豊富な知識を持ち、積極的で責任感のある人物です。",
@@ -193,7 +220,7 @@ document.addEventListener("DOMContentLoaded", function() {
   updateTranslations('en');
 });
 
-// --- Inicialização de Plugins jQuery ---
+// --- Inicialização de Plugins ---
 
 (function($) {
   "use strict";
@@ -253,15 +280,6 @@ document.addEventListener("DOMContentLoaded", function() {
     
     resistance: true,
     resistanceRatio: 0.85,
-    
-    on: {
-      reachEnd: function () {
-        console.log('Chegou no final dos slides');
-      },
-      reachBeginning: function () {
-        console.log('Chegou no início dos slides');
-      }
-    }
 });
 
 window.addEventListener('resize', function() {
