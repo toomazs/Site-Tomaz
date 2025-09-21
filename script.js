@@ -21,7 +21,7 @@ const translations = {
     jobCompanyOne: "N-Multifibra · Internship",
     jobMetaOne: "Sep 2024 - Sep 2025",
     jobNoteOne: "Cotia, São Paulo, Brazil · On-site",
-    jobTitleTwo: "Full-Stack Software Developer Jr",
+    jobTitleTwo: "Full Stack Developer Jr.",
     jobCompanyTwo: "Hypesoft · Full-time",
     jobMetaTwo: "Sep 2025 - Present",
     jobNoteTwo: "Pinheiros, São Paulo, Brazil · Hybrid",
@@ -63,7 +63,7 @@ const translations = {
     jobCompanyOne: "N-Multifibra · Estágio",
     jobMetaOne: "set de 2024 - set de 2025",
     jobNoteOne: "Cotia, São Paulo, Brasil · Presencial",
-    jobTitleTwo: "Desenvolvedor de Software Full-Stack Jr",
+    jobTitleTwo: "Desenvolvedor Full Stack Jr.",
     jobCompanyTwo: "Hypesoft · Tempo integral",
     jobMetaTwo: "set de 2025 - o momento",
     jobNoteTwo: "Pinheiros, São Paulo, Brasil · Hibrido",
@@ -106,7 +106,7 @@ const translations = {
     jobCompanyOne: "N-Multifibra · インターンシップ",
     jobMetaOne: "2024年9月 - 2025年9月",
     jobNoteOne: "コチア、サンパウロ、ブラジル · 対面",
-    jobTitleTwo: "ソフトウェアエンジニアフルスタック Jr",
+    jobTitleTwo: "ソフトウェアエンジニアフルスタック Jr.",
     jobCompanyTwo: "Hypesoft · パートタイム",
     jobMetaTwo: "2025年9月 - 現在",
     jobNoteTwo: "ピンヘイロス、サンパウロ、ブラジル · ハイブリッド",
@@ -147,7 +147,7 @@ iconBoxes.forEach((btn) => {
   btn.addEventListener("click", () => {
     let modalId = btn.getAttribute("data-modal");
     let currentModal = document.getElementById(modalId);
-    
+
     document.querySelectorAll('.popup').forEach((otherModal) => {
       if (otherModal !== currentModal) {
         otherModal.classList.add('closing');
@@ -217,7 +217,7 @@ document.querySelectorAll('.flag').forEach(flag => {
 
 // --- Lógica de Inicialização ---
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const aboutPopup = document.getElementById("about");
   if (aboutPopup) {
     aboutPopup.style.display = "block";
@@ -229,7 +229,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // --- Inicialização de Plugins ---
 
-(function($) {
+(function ($) {
   "use strict";
 
   $(".popup").tilt({
@@ -244,10 +244,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
   var swiper = new Swiper(".swiper", {
     preventClicks: true,
-    noSwiping: false, 
+    noSwiping: false,
     freeMode: false,
-    loop: true, 
-    centeredSlides: false, 
+    loop: true,
+    centeredSlides: false,
     spaceBetween: 30,
     navigation: {
       nextEl: ".next",
@@ -259,37 +259,37 @@ document.addEventListener("DOMContentLoaded", function() {
       sensitivity: 1,
     },
     breakpoints: {
-      0: { 
+      0: {
         slidesPerView: 1,
         spaceBetween: 20
       },
-      680: { 
+      680: {
         slidesPerView: 2,
         spaceBetween: 25
       },
-      1100: { 
-        slidesPerView: 'auto', 
+      1100: {
+        slidesPerView: 'auto',
         spaceBetween: 30
       },
-      1600: { 
-        slidesPerView: 'auto', 
+      1600: {
+        slidesPerView: 'auto',
         spaceBetween: 35
       },
-      2048: { 
+      2048: {
         slidesPerView: 'auto',
         spaceBetween: 40
       }
     },
-    
+
     grabCursor: true,
-    watchOverflow: true, 
+    watchOverflow: true,
     speed: 600,
-    
+
     resistance: true,
     resistanceRatio: 0.85,
-});
+  });
 
-window.addEventListener('resize', function() {
+  window.addEventListener('resize', function () {
     swiper.update();
-});
+  });
 }(jQuery));
