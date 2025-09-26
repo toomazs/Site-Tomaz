@@ -27,7 +27,7 @@ const AboutModal = ({ isClosing, onClose, currentLanguage, onLanguageChange, get
 
             <div className="icones-direita">
               <a
-                href="https://drive.google.com/file/d/1TZV7gaaVHdJurRKT9nyswaivtx6Meh56/view?usp=sharing"
+                href="https://drive.google.com/file/d/1cg-cYrX6athe1lthmjKPWJX77rZ7tLOa/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="icon-link"
