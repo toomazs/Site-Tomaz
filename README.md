@@ -1,54 +1,137 @@
-# Meu Site-Portfólio - Eduardo Tomaz
+# Portfólio Eduardo Tomaz - React
 
-[![Website](https://img.shields.io/badge/Website-Online-blue?style=for-the-badge&logo=vercel)](https://site-tomaz.vercel.app/)
+Este é o portfólio pessoal de Eduardo Tomaz migrado de HTML/CSS/JS puro para React, mantendo todas as funcionalidades, animações e design original.
 
-Este é o meu portfólio pessoal, criado para demonstrar minhas habilidades, projetos e trajetória como Desenvolvedor Full Stack e estudante de Ciências da Computação. O conceito do site é inspirado em uma simulação do sistema operacional macOS, proporcionando uma experiência de usuário interativa e única com janelas que podem ser abertas, minimizadas e maximizadas.
+## 🚀 Funcionalidades
 
----
+- **Design Responsivo**: Layout adaptado para todas as telas
+- **Modais Interativos**: 5 seções principais (About, Projects, Experience, Testimonials, Contact)
+- **Multilíngue**: Suporte a Português, Inglês e Japonês
+- **Animações Fluidas**: Transições suaves e efeitos visuais
+- **Formulário de Contato**: Integração com EmailJS
+- **Slider de Depoimentos**: Usando Swiper.js
+- **Background Animado**: Vídeo de fundo com gradientes animados
 
-### ✨ Visão Geral
+## 🛠️ Tecnologias Utilizadas
 
-O projeto foi desenvolvido em aproximadamente 1 mês com o objetivo de apresentar de forma criativa meu perfil profissional. Ele inclui seções dedicadas a:
-* **Sobre Mim:** Uma breve introdução, links para minhas redes sociais e currículos.
-* **Projetos:** Apresenta minhas habilidades técnicas (stack), projetos práticos com links para os repositórios ou websites online, e meus certificados.
-* **Avaliações:** Depoimentos de colegas e clientes.
-* **Contato:** Um formulário funcional para envio de mensagens.
+- **React 18**: Framework principal
+- **Vite**: Build tool e desenvolvimento
+- **Swiper**: Carrossel de depoimentos
+- **EmailJS**: Serviço de envio de emails
+- **Font Awesome**: Ícones
+- **Ion Icons**: Ícones adicionais
+- **CSS Moderno**: CSS3 com variáveis e animações
 
----
+## 📋 Pré-requisitos
 
-### 🚀 Demonstração Online
+- Node.js (versão 16 ou superior)
+- npm ou yarn
 
-Você pode acessar a versão ao vivo do projeto aqui:
+## ⚡ Instalação e Execução
 
-**[https://site-tomaz.vercel.app/](https://site-tomaz.vercel.app/)**
+1. **Clone o repositório:**
+   ```bash
+   git clone <seu-repositorio>
+   cd portfolio-react
+   ```
 
----
+2. **Instale as dependências:**
+   ```bash
+   npm install
+   ```
 
-### 🌟 Funcionalidades
+3. **Execute o projeto em desenvolvimento:**
+   ```bash
+   npm run dev
+   ```
 
-* **Interface inspirada no macOS:** Janelas interativas que simulam um ambiente de desktop.
-* **Design Responsivo:** Totalmente adaptável para desktops, tablets e smartphones.
-* **Multi-idioma:** Suporte para Português, Inglês e Japonês com transições suaves.
-* **Efeitos Visuais:**
-    * Animação 3D nas janelas com **Tilt.js**.
-    * Slider de depoimentos interativo com **Swiper.js**.
-    * Animações e transições modernas com CSS.
-* **Formulário de Contato Funcional:** Integrado com **EmailJS** para receber mensagens diretamente no meu e-mail.
+4. **Acesse no navegador:**
+   ```
+   http://localhost:5173
+   ```
 
----
+## 🏗️ Build para Produção
 
-### 💻 Tecnologias Utilizadas
+```bash
+npm run build
+```
 
-* **Frontend:**
-    * HTML5
-    * CSS3 (com Flexbox e Grid Layout)
-    * JavaScript (ES6+)
+Os arquivos de produção serão gerados na pasta `dist/`.
 
-* **Bibliotecas e Frameworks:**
-    * [jQuery](https://jquery.com/)
-    * [Swiper.js](https://swiperjs.com/)
-    * [Tilt.js](https://micku7zu.github.io/vanilla-tilt.js/)
-    * [EmailJS](https://www.emailjs.com/)
-    * [Font Awesome](https://fontawesome.com/) (para ícones)
+## 📁 Estrutura do Projeto
 
----
+```
+portfolio-react/
+├── public/
+│   └── img/              # Imagens e assets
+├── src/
+│   ├── components/
+│   │   ├── modals/       # Componentes dos modais
+│   │   ├── BackgroundVideo.jsx
+│   │   └── IconContainer.jsx
+│   ├── utils/
+│   │   └── translations.js
+│   ├── App.jsx
+│   ├── App.css
+│   └── main.jsx
+├── package.json
+└── README.md
+```
+
+## 🌟 Componentes Principais
+
+- **App.jsx**: Componente principal com gerenciamento de estado
+- **ModalWrapper.jsx**: Wrapper reutilizável para todos os modals
+- **AboutModal.jsx**: Modal da seção "Sobre"
+- **ProjectsModal.jsx**: Modal de projetos e habilidades
+- **ExperienceModal.jsx**: Modal de experiências profissionais
+- **TestimonialModal.jsx**: Modal com slider de depoimentos
+- **ContactModal.jsx**: Modal com formulário de contato
+- **LanguageSwitcher.jsx**: Componente para troca de idiomas
+
+## 🎨 Personalização
+
+### Alterando Conteúdo
+- **Traduções**: Edite `src/utils/translations.js`
+- **Projetos**: Modifique as arrays em `ProjectsModal.jsx`
+- **Experiências**: Atualize os dados em `ExperienceModal.jsx`
+- **Depoimentos**: Edite a array de testimonials em `TestimonialModal.jsx`
+
+### Alterando Estilos
+- **CSS Global**: `src/App.css`
+- **Variáveis CSS**: Definidas em `:root` no App.css
+
+### EmailJS Configuration
+Para que o formulário de contato funcione, configure suas credenciais do EmailJS em `ContactModal.jsx`:
+
+```javascript
+emailjs.init("SUA_PUBLIC_KEY");
+// e
+emailjs.sendForm('SEU_SERVICE_ID', 'SEU_TEMPLATE_ID', this)
+```
+
+## 📱 Responsividade
+
+O projeto inclui breakpoints para:
+- Desktop: > 1024px
+- Tablet: 768px - 1024px
+- Mobile: < 768px
+- Small Mobile: < 480px
+
+## 🚀 Deploy
+
+O projeto pode ser deployado em qualquer serviço de hosting estático como:
+- Vercel
+- Netlify
+- GitHub Pages
+- Firebase Hosting
+
+## 📄 Licença
+
+Este projeto é de uso pessoal. Todos os direitos reservados a Eduardo Tomaz.
+
+## 📞 Contato
+
+- **LinkedIn**: [Eduardo Tomaz](https://www.linkedin.com/in/eduardotoomazs/)
+- **GitHub**: [toomazs](https://github.com/toomazs)
+- **Instagram**: [@tomazdudux](https://instagram.com/tomazdudux)
